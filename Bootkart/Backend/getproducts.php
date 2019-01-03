@@ -31,13 +31,13 @@ function getproductsbycategory($category){
     //$product='Fridge';
     //array_push($products,$product);
     //print_r($products);
-    $data=array();
+    $data1=array();
     $sql="SELECT * FROM products WHERE category = '$category'";
     $result=$conn->query($sql);
     while($row=$result->fetch_assoc()){
-        array_push($data,$row);
+        array_push($data1,$row);
     }
-    return($data);
+    return($data1);
 }
 
 function getcart($id){
