@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+    <title>Day 3</title>
+</head>
+<body style="background-color: gray;padding :40px">
+    <input id="first" placeholder="First Number" type="text"><br><br>
+    <input id="second" placeholder="Second Number" type="text"><br><br>
+    <input id="answer" placeholder="Answer" type="text"><br><br>
+    <button id="answer-button" class="btn btn-danger" onclick="add()">Click Me</button>
+    <button class="btn btn-info" onclick="refresh()">Refresh</button>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function add(){
+        x=$("#first").val();
+        y=$("#second").val();
+        //x=document.getElementById("first").value;
+        //y=document.getElementById("second").value;
+        x=parseInt(x);
+        y=parseInt(y);
+        z=x+y;
+       $("#answer").val(z);
+       // document.getElementById("answer").value = z;
+       $("#answer-button").removeClass("btn-danger");
+       //$("#answer-button").addClass("btn-success");
+       $("#answer-button").hide();
+       
+    }
+    function refresh(){
+        window.location="index.html";
+        $("#answer-button").click();
+    }
+    </script>
+    
+</body>
+</html>
